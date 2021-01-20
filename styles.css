@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;   
+    font-family: 'Roboto';
+    font-size: 100%;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 0 1px 9px rgba(0, 0, 0, 0.788);
+}
+
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 85%;
+    padding: .8rem 0 .8rem 0;
+    align-items: center;
+}
+
+.nav-center div {
+    display: flex;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #111111;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 1s ease-out;
+}
+
+nav ul li a::before {
+    content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: -10px;
+	left: 0;
+	background-color: #000;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover:before {
+    visibility: visible;
+	transform: scaleX(1);
+}
+
+/* nav ul li a:hover {
+    border-bottom: 2px solid black;
+} */
+
+nav ul li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container h2 {
+    position: relative;
+    font-size: xx-large;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.192); */
+    border-radius: 24px;
+    padding: 30px;
+    background-attachment: fixed;
+    background: inherit;
+    
+}
+
+.container .blur__container {
+    position: relative;
+    background-attachment: fixed;
+    background: inherit;
+    margin-bottom: 2rem;
+}
+
+.container .blur__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(5px);
+    background: inherit;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.699);
+}
+
+.container button {
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    border: 2px solid rgba(255, 255, 255, 0.644);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    outline: 0;
+}
+
+.container button:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+}
